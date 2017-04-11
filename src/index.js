@@ -15,7 +15,7 @@ let store = createStore(reducers, compose(
 document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
-      <App />
+       <App />
     </Provider>,
     document.getElementById('app')
   )

@@ -20,3 +20,25 @@ export function fetchPosts (subreddit) {
       })
   }
 }
+
+export const receiveComments = (comments) => {
+  return {
+    type: 'RECEIVE_COMMENTS',
+    comments: comments.map(comments => comments.data)
+  }
+}
+
+export function getComments (subreddit) {
+  console.log('hi')
+  return (dispatch) => {
+    request
+      .get(`http://www.reddit.com/r/newzealand/comments.json`)
+      .end((err, res) => {
+        if (err) {
+          console.error(err.message)
+          return
+        }
+        dispatch(receiveComments(res.body.data.children))
+      })
+  }
+}
