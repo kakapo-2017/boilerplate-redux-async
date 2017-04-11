@@ -12,7 +12,6 @@ const Subreddit = ({subreddits}) => (
         author={post.author}
         />
     )}
-    
     </h1>
   </div>
 )

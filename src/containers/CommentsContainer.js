@@ -1,13 +1,13 @@
 import {connect} from 'react-redux'
 
-import Subreddit from '../components/Subreddit'
+import Comments from '../components/Comments'
 
 const mapStateToProps = (state) => {
   return {
-    subreddits: state.subreddits
+    comments: state.comments
   }
 }
 
 export default connect(
   mapStateToProps
-)(Subreddit)
+)(Comments)
