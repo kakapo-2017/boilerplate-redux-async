@@ -28,7 +28,7 @@ export const receiveComments = (comments) => {
   }
 }
 
-export function getComments (subreddit) {
+export function getComments () {
   return (dispatch) => {
     request
       .get(`http://www.reddit.com/r/newzealand/comments.json`)
